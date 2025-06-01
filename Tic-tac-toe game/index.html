@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Tic Tac Toe</h1>
+
+  <div id="toggle-theme">🌙</div>
+
+  <div class="scoreboard">
+    <div>X Wins: <span id="xScore">0</span></div>
+    <div>O Wins: <span id="oScore">0</span></div>
+    <div>Draws: <span id="draws">0</span></div>
+  </div>
+
+  <div id="game">
+    <div class="cell" data-index="0"></div>
+    <div class="cell" data-index="1"></div>
+    <div class="cell" data-index="2"></div>
+    <div class="cell" data-index="3"></div>
+    <div class="cell" data-index="4"></div>
+    <div class="cell" data-index="5"></div>
+    <div class="cell" data-index="6"></div>
+    <div class="cell" data-index="7"></div>
+    <div class="cell" data-index="8"></div>
+  </div>
+
+  <div id="status">Player X's turn</div>
+  <button id="restart">Restart Game</button>
+
+  <audio id="moveSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_3bb53b51c1.mp3?filename=click-124467.mp3"></audio>
+  <audio id="winSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_14b9e5dcb1.mp3?filename=game-win-sound-1-183032.mp3"></audio>
+  <audio id="drawSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_702ae5b0c1.mp3?filename=retro-game-notification-21241.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

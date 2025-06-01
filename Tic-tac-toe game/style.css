@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+#game {
+  display: grid;
+  grid-template-columns: repeat(3, 110px);
+  grid-gap: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.cell {
+  width: 110px;
+  height: 110px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.cell:hover {
+  transform: scale(1.05);
+  background-color: #f0f8ff;
+}
+
+#status {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  font-weight: 500;
+}
+
+button#restart {
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+button#restart:hover {
+  background: linear-gradient(135deg, #5b5ff3, #a160f8);
+  transform: scale(1.05);
+}
+
+.scoreboard {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 15px 0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.winning {
+  background-color: #90ee90 !important;
+  animation: flash 0.4s ease-in-out 4;
+}
+
+@keyframes flash {
+  0%, 100% { background-color: #90ee90; }
+  50% { background-color: #caffd1; }
+}
+
+/* Dark mode */
+body.dark {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+body.dark .cell {
+  background-color: #444;
+  color: #f8f8f8;
+}
+
+body.dark #status,
+body.dark .scoreboard {
+  color: #f0f0f0;
+}
+
+#toggle-theme {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #fff;
+  user-select: none;
+}
+
